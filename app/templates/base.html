@@ -1,0 +1,29 @@
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/Actividad_6.css' %}">
+</head>
+<body>
+    <div class="wrap">
+        <ul class="tabs">
+            <li><a href="{% url 'home' %}"><span class="fa fa-home"></span><span class="tab-text">Home</span></a></li>
+			<li><a href="{% url 'perfil' %}"><span class="fa fa-group"></span><span class="tab-text">Perfil</span></a></li>
+			<li><a href="{% url 'discos' %}"><span class="fa fa-briefcase"></span><span class="tab-text">Discos</span></a></li>
+			<li><a href="{% url 'creditos' %}"><span class="fa fa-bookmark"></span><span class="tab-text">Créditos</span></a></li>
+            <li><a href="{% url 'ventaDiscos' %}"><span class="fa fa-bookmark"></span><span class="tab-text">Ventas de discos</span></a></li>
+		</ul>
+        <div class="secciones">
+            <p>Estudiante: Cory Ramírez</p>
+            <p>Carnet: 0903-19-6194</p>
+        </article>
+    </div>
+    
+    <div class="secciones">
+        {% block contenido %}
+        {% endblock contenido %}
+    </div>
+</div>
+</body>
+<footer>
+    <script src="{% static 'scripts/Actividad_6.js' %}"></script>
+</footer>
